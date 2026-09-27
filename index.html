@@ -1,1 +1,309 @@
+Build a beautiful, modern, responsive FAMILY TREE WEBSITE for a family with 4 generations.
 
+The website should be designed as a digital family history/memorial website where family members can view relationships, names, photos, dates, and short biographies.
+
+MAIN REQUIREMENTS:
+
+1. FAMILY TREE
+- Create an interactive family tree covering 4 generations.
+- The generations should be clearly separated:
+  Generation 1: Great-grandparents
+  Generation 2: Grandparents
+  Generation 3: Parents, uncles, aunts
+  Generation 4: Children and grandchildren
+- Display each person as a profile card.
+- Each profile card should contain:
+  - Profile picture
+  - Full name
+  - Date of birth
+  - Date of death (if applicable)
+  - Spouse
+  - Relationship/title
+  - Short biography
+- Connect family members with clear visual lines showing:
+  - Parent-child relationships
+  - Marriage/spouse relationships
+  - Sibling relationships
+
+2. INTERACTIVE FAMILY TREE
+- Make the family tree horizontally scrollable on smaller screens.
+- Allow users to zoom in and out.
+- Allow users to click on a person to open a larger profile.
+- Add smooth animations when opening profiles.
+- Include a "Home/Overview" button that returns the user to the complete family tree.
+- Make the tree easy to understand even when there are many family members.
+
+3. PHOTO UPLOAD FUNCTION
+Create a photo upload feature for family members.
+
+Each person should have:
+- An "Upload Photo" button
+- Ability to select an image from the device
+- Image preview before saving
+- Ability to replace an existing photo
+- Ability to remove a photo
+- Automatically crop/resize photos so profile pictures have a consistent appearance.
+
+IMPORTANT:
+Do not make the upload feature only visual. Structure the application so uploaded images can actually be stored and associated with the correct family member.
+
+If a backend is required, use:
+- Firebase Storage for images
+- Firebase Firestore for family-member information
+
+If Firebase is not available, create a clearly separated frontend version using localStorage as a temporary solution and explain where Firebase can later be connected.
+
+4. ADD FAMILY MEMBER
+Create an "Add Family Member" form.
+
+Fields:
+- Full name
+- Gender
+- Date of birth
+- Date of death
+- Relationship
+- Generation
+- Spouse
+- Father
+- Mother
+- Biography
+- Profile picture
+
+After submitting, the new person should appear in the correct position in the family tree.
+
+5. EDIT FAMILY MEMBER
+Allow an authorized user/admin to:
+- Edit name
+- Edit dates
+- Edit biography
+- Change relationships
+- Replace profile picture
+- Delete a family member
+
+Before deleting a person, display a confirmation message.
+
+6. FAMILY PHOTO GALLERY
+Create a separate "Family Gallery" page.
+
+Features:
+- Upload family photographs
+- Display photos in a beautiful responsive grid
+- Clicking a photo opens it in a larger lightbox
+- Show caption/date if available
+- Allow admin to delete photos
+- Organize photos by:
+  - Family events
+  - Weddings
+  - Birthdays
+  - Reunions
+  - Old family photos
+  - Memorials
+  - Other
+
+7. PERSON PROFILE PAGE
+When a family member is clicked, show a detailed profile page containing:
+- Large profile picture
+- Full name
+- Family relationship
+- Birth/death information
+- Biography
+- Parents
+- Spouse
+- Children
+- Siblings
+- Photos
+- A small family-tree section showing where that person belongs in the family.
+
+8. FAMILY TIMELINE
+Create a timeline showing important family events.
+
+Examples:
+- Births
+- Marriages
+- Graduations
+- Relocations
+- Family reunions
+- Important achievements
+- Deaths/memorials
+
+Each event should have:
+- Date
+- Title
+- Description
+- Optional photograph
+
+9. DESIGN
+Use a warm, elegant family-history design.
+
+Suggested style:
+- Cream/white background
+- Gold or dark green accents
+- Elegant typography
+- Soft shadows
+- Rounded profile cards
+- Subtle animations
+- Large family photographs
+- Clean modern layout
+
+The website should feel like a combination of:
+- A family archive
+- A digital family tree
+- A photo album
+- A family history book
+
+10. NAVIGATION
+
+Create a navigation bar containing:
+
+HOME
+FAMILY TREE
+FAMILY MEMBERS
+PHOTO GALLERY
+TIMELINE
+ABOUT OUR FAMILY
+
+On mobile, convert the navigation into a hamburger menu.
+
+11. HOME PAGE
+
+The homepage should contain:
+
+Hero section:
+"OUR FAMILY STORY"
+
+Subtitle:
+"Four Generations • One Family • One Story"
+
+Display a large family photograph.
+
+Include buttons:
+"EXPLORE FAMILY TREE"
+"VIEW FAMILY GALLERY"
+
+Below the hero section show:
+- Number of generations
+- Number of family members
+- Number of family photos
+- Important family quote
+
+12. SEARCH
+
+Add a search box that allows users to search for family members by:
+- Name
+- Relationship
+- Generation
+
+13. RESPONSIVE DESIGN
+
+The website must work properly on:
+- Desktop
+- Laptop
+- Tablet
+- Android phones
+- iPhones
+
+The family tree should remain usable on small screens.
+
+14. ADMIN AREA
+
+Create a simple admin dashboard where the family administrator can:
+- Add family members
+- Edit family members
+- Delete family members
+- Upload photos
+- Manage gallery
+- Add timeline events
+
+Protect the admin area with authentication.
+
+15. DATA STRUCTURE
+
+Structure the family-member data so that relationships are stored using unique IDs rather than only names.
+
+For example:
+
+{
+  id: "person001",
+  name: "John Doe",
+  gender: "male",
+  birthDate: "1940-05-12",
+  deathDate: "",
+  photo: "",
+  fatherId: "",
+  motherId: "",
+  spouseIds: [],
+  childrenIds: [],
+  generation: 1,
+  biography: ""
+}
+
+This should make it possible to dynamically generate the family tree.
+
+16. TECHNICAL REQUIREMENTS
+
+Use:
+- HTML5
+- CSS3
+- JavaScript
+
+If a framework is appropriate, React can be used.
+
+Use clean, well-organized code.
+
+Separate:
+- HTML/components
+- CSS
+- JavaScript/data
+- Firebase configuration
+
+Do not put everything into one huge file unless necessary.
+
+17. SAMPLE FAMILY DATA
+
+Create realistic placeholder data for 4 generations so that I can immediately see how the website works.
+
+Use names such as:
+
+Generation 1:
+Great-grandfather
+Great-grandmother
+
+Generation 2:
+Grandfather
+Grandmother
+Their siblings
+
+Generation 3:
+Father
+Mother
+Uncles
+Aunts
+
+Generation 4:
+Children
+Cousins
+
+Clearly label all sample information as placeholder data so it can easily be replaced with my real family information.
+
+18. IMPORTANT USER EXPERIENCE REQUIREMENT
+
+The website must be easy for a non-technical family administrator to maintain.
+
+I should be able to add a new family member without editing the source code.
+
+I should also be able to upload photographs directly from the website.
+
+19. FINAL OUTPUT
+
+Provide:
+- Complete working source code
+- All HTML/CSS/JavaScript files
+- Firebase setup instructions if Firebase is used
+- Database structure
+- Instructions for deploying the website
+- Instructions for adding the first 4 generations
+- Instructions for creating the admin account
+
+Make sure there are no broken buttons or placeholder functions pretending to work.
+
+The final website should look professional enough to be used as a real family archive.
